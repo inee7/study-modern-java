@@ -51,6 +51,12 @@ public class Sorting {
     // [Apple{color=RED, weight=10}, Apple{color=RED, weight=20}, Apple{color=GREEN, weight=155}]
     inventory.sort(comparing(Apple::getWeight));
     System.out.println(inventory);
+
+    inventory.sort(
+            comparing(Apple::getWeight)
+            .reversed() // 역순
+            .thenComparing(Apple::getColor) //같으면 이걸로 비교
+    );
   }
 
   static class AppleComparator implements Comparator<Apple> {

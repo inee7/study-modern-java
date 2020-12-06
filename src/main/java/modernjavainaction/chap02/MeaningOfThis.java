@@ -17,9 +17,10 @@ public class MeaningOfThis {
     r.run();
   }
 
+  //익명 클래스에서 바라보는 값
   public static void main(String... args) {
     MeaningOfThis m = new MeaningOfThis();
-    m.doIt(); // ???
+    m.doIt(); // ??? -> 5임
   }
 
 }
